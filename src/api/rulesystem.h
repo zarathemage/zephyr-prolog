@@ -4,14 +4,20 @@
 // The rule parsing API
 
 /*
- * rule string is of the following format :
+ * rule string parses are of the following format :
  * 
  * "( or ( not a and b ) ( not c ) )"
+ *
+ * binary byte strings are of the format :
+ * TODO
  */
 
 #include "zephyrrule.h"
 
-// parse precondition into rule
-PreConditionPtr *derive_precondition(char *rulestring, int len, PreConditionPtr startpre);
+// parse precondition into rule (with strings)
+PreConditionPtr *derive_precondition(char *rulestring);
+
+// parse precondition into rule (with binary image)
+PreConditionPtr *derive_precondition_from_image(char *bytes);
 
 #endif

@@ -3,9 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-PreConditionPtr *derive_precondition(char *rulestring, int len, PreConditionPtr startpre)
+PreConditionPtr *derive_precondition(char *rulestring)
 {
-  int index = -1, j = 0;
+  int index = -1, j = 0, len = strlen(rulestring);
   char *workstring;
   char substring[len];
   
@@ -107,3 +107,7 @@ static char *get_workstring(char *rulestring, int len) {
   return NULL;
 }
   
+PreConditionPtr *derive_precondition_from_image(char *bytes)
+{
+  return NULL; // FIXME
+}
