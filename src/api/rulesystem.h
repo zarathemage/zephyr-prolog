@@ -6,12 +6,12 @@
 /*
  * rule string is of the following format :
  * 
- * "or ((not a and b) (not c))"
+ * "( or ( not a and b ) ( not c ) )"
  */
 
 #include "zephyrrule.h"
 
 // parse precondition into rule
-PreConditionPtr derive_precondition(char *string, int len, PreConditionPtr startpre);
+PreConditionPtr *derive_precondition(char *rulestring, int len, PreConditionPtr startpre);
 
 #endif
